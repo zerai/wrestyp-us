@@ -1,0 +1,4 @@
+zoonet_ypus:
+    resource: "@ZoonetYpusBundle/Resources/config/routing.yml"
+    prefix:   /
+
