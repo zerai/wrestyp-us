@@ -1,5 +1,14 @@
 {# {% extends 'ZoonetYpusBundle::layout.html.twig' %} #}
 
 {% block body %}
-    Blog homepage
+    Pagina generate da Pagecontroller index
+
+    {% for research in researchs %}
+    		Ricerce nr: {{ research.id }} <br>
+    		what: {{ research.what }} -> where: {{ research.where }} -> Stato: {{ research.status }}<br>
+    		<a href="{{ path('ZoonetYpusBundle_researh_show', { 'id': research.id }) }}">Vai alla ricerca</a>
+    		<hr>
+    {%  else %}
+    		<p> Non ci sono ricerche</p>
+    {%  endfor %}
 {% endblock %}
