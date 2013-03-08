@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
 *@ORM\Entity
 *@ORM\Table(name="Research")
+*@ORM\HasLifecycleCallbacks
 */
 class Research
 {
@@ -66,6 +67,21 @@ class Research
      * @ORM\Column(type="datetime", nullable=true)
      */
     protected $finished_at;
+
+
+    public function __construct()
+    {
+        $this->setCreatedAt(new \DateTime());
+        $this->setUpdatedAt(new \DateTime());
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function setUpdatedValue()
+    {
+       $this->setUpdatedAt(new \DateTime());
+    }
 
     /**
      * Get id
