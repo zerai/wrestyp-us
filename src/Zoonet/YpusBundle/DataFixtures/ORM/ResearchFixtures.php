@@ -55,7 +55,7 @@ class ResearchFixtures implements FixtureInterface
 				$research5->setWhere('miami, FL');
 				$research5->setActive(0);
 				$research5->setStatus(2);
-				$research5->setCreatedAt(new \DateTime('2011-07-23 06:12:33'));
+				$research5->setCreatedAt(new \DateTime('2012-01-01 06:12:33'));
 				$research5->setUpdatedAt($research5->getCreatedAt());
 
 				$manager->persist($research5);
@@ -68,7 +68,7 @@ class ResearchFixtures implements FixtureInterface
 				$research5->setWhere('orlando, FL');
 				$research5->setActive(1);
 				$research5->setStatus(3);
-				$research5->setCreatedAt(new \DateTime('2011-07-23 06:12:33'));
+				$research5->setCreatedAt(new \DateTime());
 				$research5->setUpdatedAt($research5->getCreatedAt());
 
 				$manager->persist($research5);
@@ -80,7 +80,7 @@ class ResearchFixtures implements FixtureInterface
 				$research6->setWhere('all states');
 				$research6->setActive(0);
 				$research6->setStatus(3);
-				$research6->setCreatedAt(new \DateTime('2011-07-23 06:12:33'));
+				$research6->setCreatedAt(new \DateTime());
 				$research6->setUpdatedAt($research6->getCreatedAt());
 
 				$manager->persist($research6);
