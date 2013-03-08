@@ -26,7 +26,7 @@ class Research
 
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(name="`where`", type="string")
      */
     protected $where;
 
@@ -39,7 +39,7 @@ class Research
 
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
      protected $status;
 
@@ -57,13 +57,13 @@ class Research
 
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     protected $started_at;
 
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     protected $finished_at;
 
