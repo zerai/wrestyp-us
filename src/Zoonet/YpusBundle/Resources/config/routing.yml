@@ -6,3 +6,9 @@ ZoonetYpusBundle_homepage:
     defaults: { _controller: ZoonetYpusBundle:Page:index }
     requirements:
         _method:  GET
+ZoonetYpusBundle_researh_show:
+    pattern:  /{id}
+    defaults: { _controller: ZoonetYpusBundle:Research:show }
+    requirements:
+        _method:  GET
+        id: \d+

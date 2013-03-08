@@ -1,6 +1,12 @@
+{# {% extends '::layout.html.twig' %} #}
+
 {% block body %}
     Parametri di ricerca: {{ research.what }} {{ research.where }} <br>
-    Creata: {{ research.created_at|date('c') }}
+    Attiva : {{ research.active }} -- Status : {{ research.status }} <br>
+    Creata: {{ research.createdAt|date('c') }} <br>
+    Ultima modifica: {{ research.updatedAt|date('c') }} <br>
+    Iniziata : {{ research.startedAt|date('c') }} <br>
+    Finita : {{ research.finishedAt|date('c') }} <br>
 
 
 {% endblock %}
