@@ -12,7 +12,7 @@ class PageController extends Controller
         $em = $this->getDoctrine()
                    ->getEntityManager();
 
-        $reserch = $em->createQueryBuilder()
+        $researchs = $em->createQueryBuilder()
                     ->select('r')
                     ->from('ZoonetYpusBundle:Research',  'r')
                     ->addOrderBy('r.created_at', 'DESC')
@@ -20,7 +20,7 @@ class PageController extends Controller
                     ->getResult();
 
         return $this->render('ZoonetYpusBundle:Page:index.html.twig', array(
-            'research' => $research
+            'researchs' => $researchs
         ));
     }
 }
